@@ -1,0 +1,43 @@
+<html>
+<head><title>My family Book</title></head>
+<body style="background-color: aqua;">
+
+
+<center>
+
+  <h1>My family book</h1>
+<p>My family</p>
+<img id="NyraPic" onclick="changing()" src="NyraPic.jpg" width="450">
+<h2 id="people">Me(Nyra)</h2>
+  <div>
+    <button type="button" onclick="changing()">Next</button>
+  </div>
+  <script>
+    var people=[
+    "Me(Nyra)",
+    "My dad(Harish)",
+    "My Mom(Sravanthi)",
+    "My Brother(Neel)",
+    "My Grandmom(Prathibha)",
+    "My Little Cousin Brother"];
+
+    var images=[
+     "NyraPic.jpg", 
+    "dad.jpg",
+      "MOM.jpg",
+      "brother.jpg",
+      "grandmom.jpg",
+      "littlebrother.jpg"];
+     var i=0;
+      function changing(){
+document.getElementById("NyraPic").src=images[i];
+document.getElementById("people").innerHTML=people[i];
+      
+  i++;
+  if(i>=people.length){
+    i= 0;}
+  }
+    </script>
+    </center>
+    </body>
+    </html>
